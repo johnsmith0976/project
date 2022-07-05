@@ -35,12 +35,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    row-gap: ;
+  
 
 }
 
 .two img {
-    max-width: 350px;
+    display: flex;
+    width: 350px;
+    padding: 20px;
+    padding-bottom: 55px;
     
 }
 
@@ -66,10 +69,11 @@ ul {
 }
 
 button {
-    background-color: blue;
+    background-color: #3882F6;
     display: flex;
     justify-content: center;
     padding: 5px;
+    border-radius: 25px;
     
     
 }
@@ -109,5 +113,12 @@ h2 {
 }
 
 .rectangle {
-    row-gap: 2px;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
 }
