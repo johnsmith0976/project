@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Account</title>
+</head>
+<style>
+ 
+  .kiss {
+        width: 40%;
+        margin: 0;
+        padding: 0;
+        border: 1px solid black;
+        
+        
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .tepco {
+        background-color: white;
+       
+        width: 45%;
+
+    }
+    .formcontainer {
+      
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      height: 100vh;
+      border: 1px solid black;
+    }
+    form {
+      width: 100%;
+    }
+</style>
+<body>
+ 
+    <img src="black.png" class="kiss" onmouseover="this.src='kiss.jpeg';" onmouseout="this.src='black.png';">
+       
+
+
+        <div class="formcontainer">  
+          <p> We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of. You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand. Never gonna give you up.</p>
+        <p> So sign up <em>now</em> or you'll get given up!</p>
+          <form>
+        <fieldset>
+          <legend>Feedback form</legend>
+  
+          <p>Required fields are labelled with "required".</p>
+          <div>
+            <label for="fname">Username: </label>
+            <input id="fname" name="fname" type="text" required minlength="5" maxlength="20" pattern="^[a-z]{1}([.](?![.])){1}[a-z0-9]{3,18}" placeholder="j.doe">
+            <span></span>
+          </div>
+          <div>
+            <label for="lname">Phone number: </label>
+            <input id="lname" name="lname" type="tel" required maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="1234567890">
+            <span></span>
+          </div>
+          <div class="emai">
+            <label for="mail">Email address: 
+            <input id="mail" name="email" type="email" minlength="10" required pattern="^[a-zA-Z0-9]+@dick.edu" placeholder="johndoe@dick.edu">
+            <span></span></label><div class="error" aria-live="polite"></div>
+          </div>
+          <div>Comments:
+          <textarea rows="13" cols="40" maxlength="200">
+           
+          </textarea></div>
+          
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form> 
+      <p>Already been given up? <a href="login.html">Log in</a></p>
+      </div>
+</body>
+</html>
