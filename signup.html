@@ -12,7 +12,7 @@
         width: 40%;
         margin: 0;
         padding: 0;
-        border: 1px solid black;
+     
         
         
     }
@@ -22,62 +22,159 @@
         display: flex;
     }
     .tepco {
-        background-color: white;
-       
-        width: 45%;
-
+      position: absolute;
+      background-color: rgba(0,0,0,.5);
+      top: 40%;
+      width: 40%;
+      margin: 0;
+      padding: 0;
+    }
+    .ko {
+      width: 100%
     }
     .formcontainer {
       
       width: 60%;
       display: flex;
       flex-direction: column;
-      padding-top: 30px;
+      padding-top: 6%;
       height: 100vh;
-      border: 1px solid black;
+     
     }
     form {
       width: 100%;
+      padding-top: 5%;
+      
     }
+    fieldset {
+      padding-left: 5%;
+    }
+    p{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    button {
+      margin-left: 5%;
+      margin-top: 2%;
+      width: 20vh;
+      height: 15%;
+      margin-bottom: 3%;
+      background-color: lightskyblue;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+    .flex {
+      display: flex;
+      gap: 30px;
+    }
+    .head1, .head2 {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      padding-bottom: 30px;
+      
+      
+    }
+    .head2 {
+      width: 70vh;
+    }
+    .head {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    a:visited {
+      color: purple;
+
+    }
+    input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: black;
+}
+input:focus {
+  webkit-appearance: none;
+  border-color: blue;
+  box-shadow: 2px 2px lightgray;
+}
+span {
+ position: relative;
+ top: 3vh;
+ right: 22vh;
+ 
+}
 </style>
 <body>
  
     <img src="black.png" class="kiss" onmouseover="this.src='kiss.jpeg';" onmouseout="this.src='black.png';">
-       
+       <div class="tepco"><img src="tepco.png" class="ko"></div>
 
 
         <div class="formcontainer">  
-          <p> We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of. You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand. Never gonna give you up.</p>
-        <p> So sign up <em>now</em> or you'll get given up!</p>
+          <p class="head"> We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of. You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand. Never gonna give you up.</p>
+        <p class="head"> So sign up <em>now</em> or you'll get given up!</p>
           <form>
         <fieldset>
-          <legend>Feedback form</legend>
-  
-          <p>Required fields are labelled with "required".</p>
-          <div>
-            <label for="fname">Username: </label>
-            <input id="fname" name="fname" type="text" required minlength="5" maxlength="20" pattern="^[a-z]{1}([.](?![.])){1}[a-z0-9]{3,18}" placeholder="j.doe">
-            <span></span>
-          </div>
-          <div>
-            <label for="lname">Phone number: </label>
-            <input id="lname" name="lname" type="tel" required maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="1234567890">
-            <span></span>
-          </div>
-          <div class="emai">
-            <label for="mail">Email address: 
-            <input id="mail" name="email" type="email" minlength="10" required pattern="^[a-zA-Z0-9]+@dick.edu" placeholder="johndoe@dick.edu">
-            <span></span></label><div class="error" aria-live="polite"></div>
-          </div>
-          <div>Comments:
-          <textarea rows="13" cols="40" maxlength="200">
-           
-          </textarea></div>
           
+  
+          <h2>Get Rick-rolled lol</h2>
+          <div class="flex">
+          <div class="head1">
+          <div>
+            <!-- <label for="fname">First name: </label>-->
+            <input id="fname" name="fname" type="text" required minlength="1" placeholder="FIRST NAME">
+            
+          </div>
+          <div>
+            <!--<label for="pname">Last name: </label> -->
+            <input id="pname" name="pname" type="text" required minlength="1" placeholder="LAST NAME">
+            
+          </div>
+          <div>
+            <!--<label for="lname">Phone number: </label> -->
+            <input id="lname" name="lname" type="tel" required maxlength="10" minlength="10" pattern="[0-9]{10}" placeholder="PHONE NUMBER">
+           
+          </div></div>
+          <div class="head2">
+          <div class="emai">
+            <!-- <label for="mail">Email address: </label>-->
+            <input id="mail" name="email" type="email" minlength="10" required pattern="^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}" placeholder="EMAIL">
+           
+          </div>
+          <div>
+            <!--<label for="pwd">Password </label> -->
+            <input id="pwd" name="pwd" type="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="PASSWORD" title="Your password must include at least one uppercase letter, one lowercase letter, and one number" onkeyup="check();">
+            
+          </div>
+          <div>
+            <!-- <label for="cpwd">Confirm Password </label>-->
+            <input id="cpwd" name="cpwd" type="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="CONFIRM PASSWORD" onkeyup="check();">
+            <span id="error"></span>
+          </div></div></div>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit">Sign up</button>
       </form> 
-      <p>Already been given up? <a href="login.html">Log in</a></p>
+      <p>Already been given up on? <a href="login.html">Log in</a></p>
       </div>
+    <script>
+     
+      function check() {
+         let password = document.getElementById('pwd').value;
+      let cpassword = document.getElementById('cpwd').value;
+      let error = document.getElementById('error');
+      if (password == cpassword) {
+        error.style.color = 'white';
+        error.innerHTML = '';
+      }
+      else {
+        error.style.color = 'red';
+        error.innerHTML = '*Passwords don\'t match';
+      }
+    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Account</title>
+</head>
+<style>
+ 
+  .kiss {
+        width: 40%;
+        margin: 0;
+        padding: 0;
+     
+        
+        
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .tepco {
+      position: absolute;
+      background-color: rgba(0,0,0,.5);
+      top: 40%;
+      width: 40%;
+      margin: 0;
+      padding: 0;
+    }
+    .ko {
+      width: 100%
+    }
+    .formcontainer {
+      
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 6%;
+      height: 100vh;
+     
+    }
+    form {
+      width: 100%;
+      padding-top: 5%;
+      
+    }
+    fieldset {
+      padding-left: 5%;
+    }
+    p{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    button {
+      margin-left: 5%;
+      margin-top: 2%;
+      width: 20vh;
+      height: 15%;
+      margin-bottom: 3%;
+      background-color: lightskyblue;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+    .flex {
+      display: flex;
+      gap: 30px;
+    }
+     .head2 {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      padding-bottom: 30px;
+      
+      
+    }
+    .head {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    a:visited {
+      color: purple;
+
+    }
+    input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: black;
+}
+input:focus {
+  webkit-appearance: none;
+  border-color: blue;
+  box-shadow: 2px 2px lightgray;
+}
+span {
+ position: relative;
+ top: 3vh;
+ right: 22vh;
+ 
+}
+</style>
+<body>
+ 
+    <img src="black.png" class="kiss" onmouseover="this.src='cry.jpg';" onmouseout="this.src='black.png';">
+       <div class="tepco"><img src="tepco.png" class="ko"></div>
+
+
+        <div class="formcontainer">  
+          <p class="head"> Sorry to hear about how Rick Astley turned his back on you. At least you can cry about it online using our website after you log in.</p>
+        <p class="head"> So log in <em>now</em> to complain to internet strangers!</p>
+          <form>
+        <fieldset>
+          
+  
+          <h2>F in chat</h2>
+          <div class="flex">
+          <div class="head2">
+
+          <div class="emai">
+            <input id="mail" name="email" type="email" minlength="10" required pattern="^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}" placeholder="EMAIL">
+          </div>
+
+          <div>          
+            <input id="pwd" name="pwd" type="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="PASSWORD" title="Your password must include at least one uppercase letter, one lowercase letter, and one number" onkeyup="check();">           
+          </div>
+          
+          </div></div>
+        </fieldset>
+        <button type="submit">Login</button>
+      </form> 
+
+      <p> <strong>Haven't been given up on yet? <a href="login.html">Sign up</a></strong></p>
+      </div>
+    
+</body>
+</html>
